@@ -1,4 +1,4 @@
-#!/bin/bash
+#!/bin/ash
 set -e
 
 USER="mosquitto"
@@ -22,7 +22,4 @@ chown ${USER}: /mosquitto/data
 chown ${USER}: /mosquitto/log
 echo "[DONE]"
 	
-	
-	
-
-exec su -pc "$@"
+#exec su -pc "$@"
