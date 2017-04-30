@@ -2,8 +2,8 @@ FROM alpine:3.5
 
 LABEL Description="Eclipse Mosquitto MQTT Broker"
 
-RUN groupadd -r -g 1010 mosquitto \
-    && useradd -r -u 1010 -g 1010 -d /mosquitto -m mosquitto
+RUN addgroup -S -g 1010 mosquitto \
+    && adduser -S -u 1010 -gid 1010 -h /mosquitto mosquitto
 	
 
 RUN apk --no-cache add mosquitto=1.4.10-r2 && \
